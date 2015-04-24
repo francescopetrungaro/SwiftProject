@@ -1,0 +1,12 @@
+PODS:
+  - TSCurrencyTextField (0.1.0):
+    - TSCurrencyTextField/Core (= 0.1.0)
+  - TSCurrencyTextField/Core (0.1.0)
+
+DEPENDENCIES:
+  - TSCurrencyTextField (~> 0.1.0)
+
+SPEC CHECKSUMS:
+  TSCurrencyTextField: 03f9d4d263d617d1f0e034e4ace12febcfa6fe48
+
+COCOAPODS: 0.36.4
