@@ -12,17 +12,17 @@ Well, extensions are separate binaries and I would like to avoid source code dup
 When you have an app and an extension that share code and files from your main project the best way to work is create an embedded framework, available in iOS8. 
 
 ## How does it work? 
-When you create a dynamic framework, Xcode generates an umbrella header filefor you that you can use to import other header files in the framework. For example, in my sample project, MyFramework has a handy MyFramework.h file.
+When you create a dynamic framework, Xcode generates an umbrella header filefor you that you can use to import other header files in the framework. For example, in this project, MyFramework has a header file named MyFramework.h.
 
 I use 'use_frameworks!' in my podFile to generate a framework for each pod, in this case 'TSCurrencyTextField'.
 
 The problems come when my App and my Today Extension want to use TSCurrencyTextField that seats inside my umbrella framework.
 A compile time Xcode cannot find the framework.
 
-### Objective-C
+#### Objective-C
 Any Objective-C file created in your framework and that needs to be visible to the app or extension needs to be imported in the header file of MyFramework.
 
-### Swift
+#### Swift
 If you want to expose your swift classes, methods or variables you must add the 'public' keyword to them. 
 In this way when your framework is built, the public classes, methods or variables will be accessible by your app or extension.
 
