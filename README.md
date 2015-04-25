@@ -27,8 +27,12 @@ If you want to expose your swift classes, methods or variables you must add the 
 In this way when your framework is built, the public classes, methods or variables will be accessible by your app or extension.
 
 #### Objective-C Pod
+Cocoapod generate a framwork for each Objective-C pod you specify in your pod file under MyFramework target. 
+If you want that your app and the extension can see that framework for your pod you need to make sure to specify the correct FRAMEWORK_SEARCH_PATHS in the build settings of your app and extension.
+ 		 
+You can do this adding: $(CONFIGURATION_BUILD_DIR)/Pods-FrameworkName (where FrameworkName is your Framework Target Name)
 
-To-Do
+For this specific project is $(CONFIGURATION_BUILD_DIR)/Pods-MyFramework
 
 ## Branches
 
