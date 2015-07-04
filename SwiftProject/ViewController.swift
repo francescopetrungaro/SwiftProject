@@ -29,29 +29,26 @@ import MyFramework
 class ViewController: UIViewController {
 
     @IBOutlet weak var labelTemperature: UILabel!
-
-    var timer : NSTimer?
+    @IBOutlet weak var labelDescription: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.labelTemperature.text = "Loading Temperature.."
+        self.labelDescription.text = "Weather.."
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         
         weak var weakSelf : ViewController? = self
         
-        NetworkManager.sharedInstance.fetchTemperature { (temperature) -> Void in
+        NetworkManager.sharedInstance.fetchTemperature { (currentTemperature, description) -> Void in
             
             if let strongSelf = weakSelf {
-                
-                if let currentTemperature = temperature {
-                    strongSelf.labelTemperature.text = "London Temp = \(currentTemperature)"
-                }
-                else{
-                    strongSelf.labelTemperature.text = "Uknown Temperature"
-                }
+                UIView.animateWithDuration(0.3, animations: { () -> Void in
+                    strongSelf.labelTemperature.attributedText = Utilities.formattedTemperature(currentTemperature)
+                    strongSelf.labelDescription.text = Utilities.formattedDescription(description)
+                })
             }
         }
     }

@@ -30,11 +30,13 @@ import MyFramework
 class TodayViewController: UIViewController, NCWidgetProviding {
         
     @IBOutlet weak var labelTemperature: UILabel!
+    @IBOutlet weak var labelDescription: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view from its nib.
         self.labelTemperature.text = "Loading Temperature.."
-        
+        self.labelDescription.text = "Weather.."
+
         self.preferredContentSize = CGSizeMake(CGRectGetWidth(self.view.frame), 50)
     }
     
@@ -47,19 +49,15 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 
         weak var weakSelf : TodayViewController? = self
         
-        NetworkManager.sharedInstance.fetchTemperature { (temperature) -> Void in
+        NetworkManager.sharedInstance.fetchTemperature { (currentTemperature, description) -> Void in
             
             if let strongSelf = weakSelf {
-                
-                if let currentTemperature = temperature {
-                    strongSelf.labelTemperature.text = "Current Temp = \(currentTemperature)"
-                    completionHandler(NCUpdateResult.NewData)
-                }
-                else{
-                    strongSelf.labelTemperature.text = "Uknown Temperature"
-                    completionHandler(NCUpdateResult.NoData)
-                }
+                UIView.animateWithDuration(0.3, animations: { () -> Void in
+                    strongSelf.labelTemperature.attributedText = Utilities.formattedTemperature(currentTemperature)
+                    strongSelf.labelDescription.text = Utilities.formattedDescription(description)
+                })
             }
+            (currentTemperature != nil) ? completionHandler(NCUpdateResult.NewData) : completionHandler(NCUpdateResult.NoData)
         }
     }
 }

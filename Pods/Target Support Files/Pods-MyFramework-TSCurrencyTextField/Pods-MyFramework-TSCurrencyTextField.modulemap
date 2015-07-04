@@ -1,6 +1,0 @@
-framework module TSCurrencyTextField {
-  umbrella header "Pods-MyFramework-TSCurrencyTextField-umbrella.h"
-
-  export *
-  module * { export * }
-}

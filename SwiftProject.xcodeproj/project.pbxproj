@@ -24,6 +24,7 @@
 		3BD66D5F1ADFE2B70090F909 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD66D5E1ADFE2B70090F909 /* TodayViewController.swift */; };
 		3BD66D611ADFE2B70090F909 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BD66D601ADFE2B70090F909 /* MainInterface.storyboard */; };
 		3BD66D641ADFE2B70090F909 /* MyExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3BD66D571ADFE2B70090F909 /* MyExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AF1644191B47DD7D00D760DC /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1644181B47DD7D00D760DC /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +122,7 @@
 		3BD66D5E1ADFE2B70090F909 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		3BD66D601ADFE2B70090F909 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		571C1395AFB757DBC0928C52 /* Pods_MyFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF1644181B47DD7D00D760DC /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		E48A1A043A1C6D5BB1D82037 /* Pods-MyFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFramework/Pods-MyFramework.release.xcconfig"; sourceTree = "<group>"; };
 		FA64C60B23716C577EF4C4C1 /* Pods-MyFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFramework/Pods-MyFramework.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -237,6 +239,7 @@
 			children = (
 				3BD66D311ADFE16E0090F909 /* MyFramework.h */,
 				3BD66D501ADFE26A0090F909 /* NetworkManager.swift */,
+				AF1644181B47DD7D00D760DC /* Utilities.swift */,
 				3BD66D2F1ADFE16E0090F909 /* Supporting Files */,
 			);
 			path = MyFramework;
@@ -577,6 +580,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF1644191B47DD7D00D760DC /* Utilities.swift in Sources */,
 				3BD66D511ADFE26A0090F909 /* NetworkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

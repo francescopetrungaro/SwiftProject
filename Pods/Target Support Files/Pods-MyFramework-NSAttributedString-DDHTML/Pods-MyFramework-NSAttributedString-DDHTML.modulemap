@@ -1,0 +1,6 @@
+framework module NSAttributedString_DDHTML {
+  umbrella header "Pods-MyFramework-NSAttributedString-DDHTML-umbrella.h"
+
+  export *
+  module * { export * }
+}

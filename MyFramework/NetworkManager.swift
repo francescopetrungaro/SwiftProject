@@ -24,8 +24,12 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
 import UIKit
+import XCGLogger
+import APUtils
 
-public typealias NetworkManagerCompletionBlock = (Double?) -> Void
+let log = XCGLogger.defaultInstance()
+
+public typealias NetworkManagerCompletionBlock = (NSNumber?, String?) -> Void
 
 public class NetworkManager: NSObject {
     
@@ -44,7 +48,7 @@ public class NetworkManager: NSObject {
     
     override init() {
         super.init()
-        println("NetworkManager init");
+        log.debug("NetworkManager init");
     }
     
      public func fetchTemperature(completionBlock : NetworkManagerCompletionBlock? = nil){
@@ -60,26 +64,54 @@ public class NetworkManager: NSObject {
             (data: NSData!, response: NSURLResponse!, error: NSError!) -> Void in
             
             var error: NSError?
-            var resultTemperature : Double?
+            var temperature : NSNumber?
+            var temperatureDescription : String?
             
             var resultDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &error) as? NSDictionary
-            
+
             if (error != nil) {
-                println("JSON Error \(error!.localizedDescription)")
+                log.severe("JSON Error \(error!.localizedDescription)");
             }
             else{
-                if let jsonDictionary = resultDictionary {
-                    let jsonMain = jsonDictionary["main"] as? NSDictionary
-                    if let mainDictionary = jsonMain {
-                        resultTemperature = mainDictionary["temp"] as? Double
-                    }
+                if let resultDictionary = resultDictionary {
+                    log.debug("\(resultDictionary)")
+                    
+                    temperature = NetworkManager.temperatureFromDictionary(resultDictionary)
+                    temperatureDescription = NetworkManager.temperatureDescriptionFromDictionary(resultDictionary)
                 }
             }
             
             if let completion = completionBlock{
-                completion(resultTemperature)
+                completion(temperature, temperatureDescription)
             }
         }
         task.resume()
+    }
+    
+    class func temperatureFromDictionary(resultDictionary: NSDictionary) -> NSNumber? {
+        let mainDictionary = resultDictionary["main"] as? NSDictionary
+        
+        if let mainDictionary = mainDictionary {
+            
+            let temperature = mainDictionary["temp"] as? NSString
+            if let temperature = temperature{
+                return temperature.convertToNumber()
+            }
+        }
+        return nil
+    }
+    
+    class func temperatureDescriptionFromDictionary(resultDictionary: NSDictionary) -> String? {
+        let weatherArray = resultDictionary["weather"] as? NSArray
+        
+        if let weatherArray = weatherArray {
+            if weatherArray.count > 0 {
+                let weatherDictionary = weatherArray.firstObject as? NSDictionary
+                if let weatherDictionary = weatherDictionary {
+                    return weatherDictionary["description"] as? String
+                }
+            }
+        }
+        return nil
     }
 }

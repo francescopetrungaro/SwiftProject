@@ -1,0 +1,6 @@
+framework module APUtils {
+  umbrella header "Pods-MyFramework-APUtils-umbrella.h"
+
+  export *
+  module * { export * }
+}

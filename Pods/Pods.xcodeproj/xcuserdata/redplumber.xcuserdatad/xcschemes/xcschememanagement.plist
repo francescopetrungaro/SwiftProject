@@ -4,7 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-MyFramework-TSCurrencyTextField.xcscheme</key>
+		<key>Pods-MyFramework-APUtils.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MyFramework-NSAttributedString-DDHTML.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MyFramework-XCGLogger.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1376EB6F2657D3793BBBCADB</key>
+		<key>55724EC7ADC81B7759B40979</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>358021BBDBBC14A24A7F7728</key>
+		<key>85ADBF434F321E912C9BD102</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>97ECACA8AD2F298CC04A88BA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B242C2DA2E4E359F61A3B531</key>
 		<dict>
 			<key>primary</key>
 			<true/>

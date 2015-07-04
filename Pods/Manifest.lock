@@ -1,12 +1,21 @@
 PODS:
-  - TSCurrencyTextField (0.1.0):
-    - TSCurrencyTextField/Core (= 0.1.0)
-  - TSCurrencyTextField/Core (0.1.0)
+  - APUtils (2.1.4):
+    - APUtils/Foundation (= 2.1.4)
+    - APUtils/UIKit (= 2.1.4)
+  - APUtils/Foundation (2.1.4)
+  - APUtils/UIKit (2.1.4):
+    - APUtils/Foundation
+  - NSAttributedString-DDHTML (1.1.0)
+  - XCGLogger (2.1.1)
 
 DEPENDENCIES:
-  - TSCurrencyTextField (~> 0.1.0)
+  - APUtils
+  - NSAttributedString-DDHTML
+  - XCGLogger
 
 SPEC CHECKSUMS:
-  TSCurrencyTextField: 03f9d4d263d617d1f0e034e4ace12febcfa6fe48
+  APUtils: df628ba4dffe1df72bc3d66f3b16c95bbb859264
+  NSAttributedString-DDHTML: b1e709d51e192f38d59c25c14161f7f6da52866b
+  XCGLogger: 8df921bcf88abbd511b887c8febde8163d624d81
 
-COCOAPODS: 0.36.4
+COCOAPODS: 0.37.2

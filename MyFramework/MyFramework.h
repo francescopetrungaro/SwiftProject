@@ -24,6 +24,8 @@
  */
 
 #import <UIKit/UIKit.h>
+#import <NSAttributedString_DDHTML/NSAttributedString+DDHTML.h>
+#import <APUtils/APUtils.h>
 
 //! Project version number for MyFramework.
 FOUNDATION_EXPORT double MyFrameworkVersionNumber;

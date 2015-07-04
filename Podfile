@@ -4,7 +4,9 @@ platform :ios, '8.0'
 
 target "MyFramework", :exclusive => true do
 
-pod 'TSCurrencyTextField', '~> 0.1.0'
+pod 'NSAttributedString-DDHTML'
+pod 'XCGLogger'
+pod 'APUtils'
 
 end
 
