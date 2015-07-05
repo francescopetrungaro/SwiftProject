@@ -4,7 +4,7 @@ This sample project shows the architecture I use to create a swift project that 
 The embedded frameworks uses and exposes few pods. For testing purpose I have selected two simple Objective-C pods and one Swift pod.
 
 ## Requirements
-Xcode 6.3 or above
+Xcode 6.3 or above,
 Cocoapods 0.38.0.beta.2 or above
 
 ## Goal of the Project 
