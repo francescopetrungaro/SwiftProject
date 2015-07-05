@@ -1,0 +1,6 @@
+#include "NSAttributedString-DDHTML.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/NSAttributedString-DDHTML" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/APUtils" "${PODS_ROOT}/Headers/Public/NSAttributedString-DDHTML" "${PODS_ROOT}/Headers/Public/XCGLogger" ${NSATTRIBUTEDSTRING_DDHTML_HEADER_SEARCH_PATHS}
+OTHER_LDFLAGS = ${NSATTRIBUTEDSTRING_DDHTML_OTHER_LDFLAGS}
+PODS_ROOT = ${SRCROOT}
+SKIP_INSTALL = YES

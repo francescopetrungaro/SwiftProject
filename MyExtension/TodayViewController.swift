@@ -33,9 +33,13 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     @IBOutlet weak var labelDescription: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view from its nib.
+
         self.labelTemperature.text = "Loading Temperature.."
-        self.labelDescription.text = "Weather.."
+        
+        //labelDescription uses APUtils objective-c pod exposed by 'MyFramework'
+        self.labelDescription.text = "Weather.. \n\n\(NSDate().formattedDate())"
+
+        logger.debug("The 'logger' is a swift pod exposes from the embedded framework 'MyFramework'")
 
         self.preferredContentSize = CGSizeMake(CGRectGetWidth(self.view.frame), 50)
     }

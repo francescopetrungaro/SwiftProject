@@ -24,10 +24,10 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
 import UIKit
-import XCGLogger
 import APUtils
+import XCGLogger
 
-let log = XCGLogger.defaultInstance()
+public let logger = XCGLogger.defaultInstance()
 
 public typealias NetworkManagerCompletionBlock = (NSNumber?, String?) -> Void
 
@@ -48,7 +48,7 @@ public class NetworkManager: NSObject {
     
     override init() {
         super.init()
-        log.debug("NetworkManager init");
+        logger.debug("NetworkManager init");
     }
     
      public func fetchTemperature(completionBlock : NetworkManagerCompletionBlock? = nil){
@@ -70,11 +70,11 @@ public class NetworkManager: NSObject {
             var resultDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &error) as? NSDictionary
 
             if (error != nil) {
-                log.severe("JSON Error \(error!.localizedDescription)");
+                logger.severe("JSON Error \(error!.localizedDescription)");
             }
             else{
                 if let resultDictionary = resultDictionary {
-                    log.debug("\(resultDictionary)")
+                    logger.debug("\(resultDictionary)")
                     
                     temperature = NetworkManager.temperatureFromDictionary(resultDictionary)
                     temperatureDescription = NetworkManager.temperatureDescriptionFromDictionary(resultDictionary)
@@ -92,11 +92,7 @@ public class NetworkManager: NSObject {
         let mainDictionary = resultDictionary["main"] as? NSDictionary
         
         if let mainDictionary = mainDictionary {
-            
-            let temperature = mainDictionary["temp"] as? NSString
-            if let temperature = temperature{
-                return temperature.convertToNumber()
-            }
+            return mainDictionary["temp"] as? Double
         }
         return nil
     }

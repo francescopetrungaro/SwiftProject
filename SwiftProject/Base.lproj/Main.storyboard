@@ -19,6 +19,9 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwR-z0-dvP">
                                 <rect key="frame" x="279" y="289" width="42" height="20.5"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="k4a-ju-jE4"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -26,6 +29,9 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="42" translatesAutoresizingMaskIntoConstraints="NO" id="EsN-9l-NAf">
                                 <rect key="frame" x="20" y="241" width="560" height="21.5"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="31A-9S-Lqh"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -36,10 +42,10 @@
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="cwR-z0-dvP" secondAttribute="centerY" constant="0.5" id="8Iv-A4-QlQ"/>
                             <constraint firstAttribute="trailing" secondItem="EsN-9l-NAf" secondAttribute="trailing" constant="20" id="BjO-gN-0Ls"/>
-                            <constraint firstAttribute="centerY" secondItem="EsN-9l-NAf" secondAttribute="centerY" constant="48.5" id="Uo0-rC-s8l"/>
                             <constraint firstAttribute="centerX" secondItem="cwR-z0-dvP" secondAttribute="centerX" id="X1l-2f-gGY"/>
                             <constraint firstItem="EsN-9l-NAf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="fi5-wf-HyL"/>
                             <constraint firstItem="cwR-z0-dvP" firstAttribute="top" secondItem="EsN-9l-NAf" secondAttribute="bottom" constant="27" id="jSN-8A-A40"/>
+                            <constraint firstItem="EsN-9l-NAf" firstAttribute="top" relation="greaterThanOrEqual" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="q6W-tB-DjV"/>
                         </constraints>
                     </view>
                     <connections>

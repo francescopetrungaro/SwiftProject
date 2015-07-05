@@ -1,13 +1,15 @@
 # SwiftProject
 This sample project shows the architecture I use to create a swift project that has the App and the Today Extension, and most important that shares pods and common classes between them.
-embedded framework that I am using to share code between
 
-The embedded frameworks that uses and exposes few pods, for testing purpose I have selected two simple Objective-C pods and one swift.
+The embedded frameworks uses and exposes few pods. For testing purpose I have selected two simple Objective-C pods and one Swift pod.
+
+## Requirements
+Xcode 6.3 or above
+Cocoapods 0.38.0.beta.2 or above
 
 ## Goal of the Project 
-The goal of this project is to learn how use dynamic frameworks and cocopoads with an iOS 8 App and a Today Extention.
+The goal of this project is to show how you should structure your project before the start when you have App and the Today Extension that shares pods and common classes.
 When develop and iOS App many don't think about a well structured architecture before start coding, even for a small application just because it's easy in that way.
-My approach shows how you should structure your project before the start when you have App and the Today Extension that shares pods and common classes.
 
 In the project I use pods inside the embedded framework and also expose useful pods outside (to the App and the Today Extension) because I would need to use there too. 
 
@@ -38,10 +40,8 @@ If it doesn't work, and the your App and the extension cannot see the pod, then 
 You can do this adding: $(CONFIGURATION_BUILD_DIR)/Pods-FrameworkName (where FrameworkName is your Framework Target Name)
 For this specific project is $(CONFIGURATION_BUILD_DIR)/Pods-MyFramework
 
-
-## New Features To Add
-
-1. Add Objective-C classes to the frawework
+#### Swift Pod
+Any Swift pod in your framework and that needs to be visible to the App or the Extension needs to be imported in MyFramework.h as framework.
 
 ## Suggestions???
 

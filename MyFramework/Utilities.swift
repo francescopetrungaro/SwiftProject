@@ -21,8 +21,6 @@ public class Utilities {
             labelText = "<b>Uknown Temperature</b>"
         }
         
-        let font:UIFont? = UIFont(name: "Arial", size: 12.0)
-        
         return NSAttributedString(fromHTML: labelText)
     }
     
@@ -32,11 +30,11 @@ public class Utilities {
         
         if let description = description {
             var descriptionLowercase = NSString(string: description.lowercaseString)
-            if (descriptionLowercase.containsString("sun")){
-                weatherDescription = "Enjoy the Sun"
+            if (descriptionLowercase.containsString("sky is clear")){
+                weatherDescription = "Enjoy the Sun\n\n\(NSDate().formattedDate()) "
             }
             else{
-                weatherDescription = description.capitalizedString
+                weatherDescription = "\(description.capitalizedString)\n\n\(NSDate().formattedDate())"
             }
         }else{
             weatherDescription = "Weather"

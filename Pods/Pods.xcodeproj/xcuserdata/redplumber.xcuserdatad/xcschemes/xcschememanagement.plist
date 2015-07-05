@@ -4,17 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-MyFramework-APUtils.xcscheme</key>
+		<key>APUtils.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-MyFramework-NSAttributedString-DDHTML.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-MyFramework-XCGLogger.xcscheme</key>
+		<key>NSAttributedString-DDHTML.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -24,25 +19,30 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>XCGLogger.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>55724EC7ADC81B7759B40979</key>
+		<key>36D032076DCF7C0765F240A0DEA90460</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>85ADBF434F321E912C9BD102</key>
+		<key>532E316A6465891487CB4FAA502C8A01</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>97ECACA8AD2F298CC04A88BA</key>
+		<key>8CACD1BD47F861214A2D3E0BFD600BF0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B242C2DA2E4E359F61A3B531</key>
+		<key>93C1CFE1A35E0A9C70013612C6FEC99B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

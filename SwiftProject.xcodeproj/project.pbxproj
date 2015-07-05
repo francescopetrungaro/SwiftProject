@@ -877,6 +877,7 @@
 		3BD66D661ADFE2B70090F909 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)$(CONFIGURATION_BUILD_DIR)/Pods-MyFramework",
@@ -896,6 +897,7 @@
 		3BD66D671ADFE2B70090F909 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)$(CONFIGURATION_BUILD_DIR)/Pods-MyFramework",

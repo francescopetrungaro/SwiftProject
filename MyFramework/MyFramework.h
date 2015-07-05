@@ -24,8 +24,13 @@
  */
 
 #import <UIKit/UIKit.h>
+
+//Expose Objective-C pods to the app and the extension
 #import <NSAttributedString_DDHTML/NSAttributedString+DDHTML.h>
 #import <APUtils/APUtils.h>
+
+//Expose Swift pods to the app and the extension
+@import XCGLogger;
 
 //! Project version number for MyFramework.
 FOUNDATION_EXPORT double MyFrameworkVersionNumber;
